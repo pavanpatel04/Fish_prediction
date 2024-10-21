@@ -1,46 +1,78 @@
-# Fish_prediction
-Important
-The dataset is provided in the repository as well as a link to download the dataset is provided in the Fish_species_prediction.ipynb file. After downloading the dataset locally in the system , then upload the dataset to the google collab to use it.
+Here’s a well-structured version of the provided information for a GitHub README file:
 
-Fish_species_prediction
-This projects predicts the selected species of fish(Perch ,Bream, Roach, Pike, Smelt, Parkki, Whitefish) based on its length , height , weight. We have used the K Nearest Neighbours classifier from the sklearn library.
+---
 
-Required Libraries:
-Numpy
-Gradio
-Pandas
-Seaborn
-Matplotlib
-Knn classifier
-Features
-Machine Learning Model: Built using K Nearest Neighbours classifier from the scikit-learn library.
-Prediction Interface: A Interface that is built using the Gradio library in python allows for a easy to use userfriendly interface. We can input the different inputs(length, width, height) for the fish and get the name of the fish along with its image.
-Dataset
-The dataset consists of 160 rows and 7 columns for 7 species of fish.
+# Fish Species Prediction
 
-Perch
-Bream
-Roach
-Pike
-Smelt
-Parkki
-Whitefish
-Each sample has 7 features
+This project predicts the species of fish (Perch, Bream, Roach, Pike, Smelt, Parkki, Whitefish) based on features such as length, height, and weight. The K-Nearest Neighbors (KNN) classifier from the `scikit-learn` library is used to build the machine learning model.
 
-Weight
-Length1
-Length2
-Length3
-Height
-Width
-Species
-Preprocessing
-The data is scaled using the Standard Scalar Library
+## Dataset
+The dataset consists of 160 samples with 7 features, representing 7 different species of fish. The dataset can be downloaded locally as indicated in the [Fish_species_prediction.ipynb](Fish_species_prediction.ipynb) file. Once downloaded, it should be uploaded to Google Colab for further use.
 
-Model Training
-The K nearest neighbours model is trained using the 80% of the dataset.
-Remaining 20% is used for testing purpose
-The model is checked for different parameters such as accuracy score, precision, Recall, f1 score.
-Interface
-The interface is built using the Gradio library. Input: Enter the Weight, Length, Width Output: The image along with the name of the fish.
+### Fish Species:
+- Perch
+- Bream
+- Roach
+- Pike
+- Smelt
+- Parkki
+- Whitefish
 
+### Features:
+- **Weight**
+- **Length1** (Diagonal length)
+- **Length2** (Vertical length)
+- **Length3** (Cross length)
+- **Height**
+- **Width**
+- **Species** (Target)
+
+## Libraries Required
+- `numpy`
+- `pandas`
+- `seaborn`
+- `matplotlib`
+- `scikit-learn`
+- `gradio`
+
+To install the necessary libraries, run:
+```bash
+pip install numpy pandas seaborn matplotlib scikit-learn gradio
+```
+
+## Preprocessing
+- **Scaling**: The dataset is scaled using the `StandardScaler` from the `scikit-learn` library to normalize the data before model training.
+
+## Model Training
+- **Algorithm**: K-Nearest Neighbors Classifier (`KNN`) from the `scikit-learn` library is used.
+- **Train-Test Split**: The dataset is split into 80% for training and 20% for testing.
+- **Evaluation**: The model is evaluated using several metrics:
+  - **Accuracy Score**
+  - **Precision**
+  - **Recall**
+  - **F1 Score**
+
+## Gradio Interface
+An easy-to-use, interactive prediction interface is built using the `Gradio` library in Python. Users can input various parameters such as weight, length, and width, and the model will predict the species of fish along with displaying its image.
+
+### Input:
+- Weight
+- Length
+- Width
+
+### Output:
+- Predicted species of fish
+- Image of the predicted fish species
+
+## How to Run the Project
+1. Clone the repository:
+    ```bash
+    git clone <repository-link>
+    ```
+2. Download the dataset from the link provided in the [Fish_species_prediction.ipynb](Fish_species_prediction.ipynb) file.
+3. Upload the dataset to Google Colab.
+4. Run the `Fish_species_prediction.ipynb` notebook to train the model and use the interface.
+
+---
+
+This README provides a clear, structured overview of the project, including details about the dataset, preprocessing steps, model training, and the Gradio interface.
